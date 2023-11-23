@@ -1,11 +1,11 @@
 import React from 'react'
 import SendMessage from '../components/SendMessage'
-import EncryptedMessage from '../components/EncryptedMessage'
+import ReadMessage from '../components/ReadMessage'
 
 export default function page() {
   return (
     <div>
-      <EncryptedMessage />
+      <ReadMessage />
       <SendMessage />
     </div>
   )

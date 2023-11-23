@@ -1,6 +1,7 @@
 import React from "react";
 import UserBox from "../UserBox";
 import { IconLock } from "@tabler/icons-react";
+import { User } from "@/app/dummyData";
 
 export default function SideMenu() {
   return (
@@ -12,8 +13,13 @@ export default function SideMenu() {
         </div>
         <div>
           {" "}
-          {[...new Array(10)].map((_, index) => (
-            <UserBox key={index} />
+          {User.map((user, index) => (
+            <UserBox
+              key={index}
+              isRead={user.isRead}
+              name={user.userName}
+              url={user.profileImage}
+            />
           ))}
         </div>
       </div>
